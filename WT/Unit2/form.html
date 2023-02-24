@@ -1,0 +1,107 @@
+<html>
+<head>
+    <style>
+        body {
+            background-color: rgb(106, 106, 236);
+            text-align: center;
+        }
+
+        h1 {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 35px;
+            text-align: center;
+        }
+
+        label {
+            font-size: 20px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            text-align: center;
+            }
+        input{
+            text-align: center;
+            align-items: center;
+        }
+    </style>
+    <script src="jquery-3.6.0.min.js"> </script>
+
+    <script>
+        $(function () {
+            $("[type = reset]").click(function (event) {
+                alert("Form is cleared")
+            })
+            $("input").focus(function () {
+                c = $(this).css("background-color")
+                $(this).css("background-color", "yellow")
+            })
+            $("input").blur(function (event) {
+                $(this).css("background-color", c)
+            })
+            $("#button1").click(function () {
+                $("#test").hide();
+            })
+            $("#button2").click(function () {
+                $("#test").show();
+            })
+            $("#button3").click(function () {
+                $("div").fadeToggle(1000);
+            })
+        })
+        function addImage() {
+            var canvas = document.getElementById('canvas');
+            var ctx = canvas.getContext('2d');
+            ctx.beginPath();
+            ctx.arc(75, 75, 50, 0, Math.PI * 2, true); 
+            ctx.moveTo(110, 75);
+            ctx.arc(75, 75, 35, 0, Math.PI, false); 
+            ctx.moveTo(65, 65);
+            ctx.arc(60, 65, 5, 0, Math.PI * 2, true); 
+            ctx.moveTo(95, 65);
+            ctx.arc(90, 65, 5, 0, Math.PI * 2, true); 
+            ctx.stroke();
+        }
+        $("p").prepend("<b>I Love Jquery!!! </b>");
+    </script>
+</head>
+
+<body>
+
+    <h1> Application form </h1>
+    <br><br>
+    <form method="post" action="/action_page.php" id='test' onsubmit="addImage()">
+        <label>Name : <input required type="text" name="name" id="name"></label>
+        <br><br>
+        <label>SRN : <input required type="text" name="srn" maxlength="13" patter n="PES.+"></label>
+        <br><br>
+        <label>Semester : <input required type="number" name="sem" min="1" max="8"></label>
+        <br><br>
+        <label>Section : <input required type="text" name="sec"></label>
+        <br><br>
+        <label>Email : <input type="text" name="Email"></label>
+        <br><br>
+        <label>Phone number : <input type="text" name="phone number"></label>
+        <br><br>
+        <label>Campus : <input type="text" name="campus"></label>
+        <br><br>
+        <label>Club Name : <input type="text" name="club name"></label>
+        <br>
+        <button id="button"> Submit </button>
+        <button id="button0"> Reset </button>
+        <canvas id="canvas" width="400" height="300" >
+        </canvas>
+        <h1 id="img"> </h1>
+    </form>
+    <br>
+    <hr>
+    <br>
+    <button id='button1'>Hide the form</button>
+    <button id='button2'>Show the form</button>
+    <br ><br >
+    <div> For any other information, you can visit the official website of PES University </div>
+    <br>
+    <button id='button3'>Click Here </button>
+    <br>
+    <p id='p'> Thank you for your patience </p>
+    <br />
+</body>
+
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>FAQ PAGE</title>
+    
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+      integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
+      crossorigin="anonymous"
+    />
+    
+    <link rel="stylesheet" href="stylefaq.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar__container">
+          <a href="in3dex.htm" id="navbar__logo"><i class="fas fa-star"></i>PES</a>
+          <div class="navbar__toggle" id="mobile-menu">
+            <span class="bar"></span> <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+    <main>
+        <h1 class="faq-heading" style="color: white;">FAQ'S</h1>
+        <section class="faq-container">
+            <div class="faq-one" >
+                <!-- faq question -->
+                <h1 class="faq-page" style="text-align: left;">What is the difference between astronomy and astrology?</h1>
+                <!-- faq answer -->
+                <div class="faq-body">
+                    <p style="background-color: rgb(139, 138, 138);">
+                        Believe it or not, this is the most asked question that astronomers encounter.
+                        Many people do not understand the difference. In ancient times, they were 
+                        considered one and the same. But the two disciplines were separated during the 
+                        Age of Reason in the 17th century. Astrology is a practice of using the locations 
+                        of the planets to look into a person's personality or predict the future. 
+                        It is not a science and is considered a form of divination. By contrast, 
+                        astronomy is the scientific study of the universe. Astronomers observe the 
+                        objects in the night sky to try to determine their composition and 
+                        learn more about the origin and structure of the universe.
+                    </p>
+                </div>
+            </div>
+            <hr class="hr-line">
+            <div class="faq-two">
+                <!-- faq question -->
+                <h1 class="faq-page">Do I need an expensive telescope to enjoy astronomy?</h1>
+                <!-- faq answer -->
+                <div class="faq-body">
+                    <p style="background-color: rgb(139, 138, 138);">
+                        Many people hesitate to get involved with astronomy because they believe 
+                        it requires expensive equipment. The only thing you really need to enjoy 
+                        the night sky is your eyes, a dark viewing location, and some patience. 
+                        To get a better look at things, a pair of binoculars can provide a really 
+                        good view. Many people will be surprised how many more stars and objects 
+                        they can see with a decent pair of 10X binoculars. 
+                        They collect much more light than the human eye and will bring much 
+                        dimmer objects into view. You can even see Jupiter’s moons with binoculars. 
+                        A simple camera tripod to steady the binoculars is also a good idea, 
+                        since your arms can get tired very quickly.
+                    </p>
+                </div>
+            </div>
+            <hr class="hr-line">
+            <div class="faq-three">
+                <!-- faq question -->
+            <h1 class="faq-page">How far is the Moon from Earth?</h1>
+                <!-- faq answer -->
+                <div class="faq-body">
+                    <p style="background-color: rgb(139, 138, 138);">
+                        The distance between the Moon and the Earth averages 238,857 miles (384,403 kilometers). 
+                        Since the Moon’s orbit is not a perfect circle, its distance varies. </p>
+                </div>
+            </div>
+            <hr class="hr-line">
+            <div class="faq-four">
+                <!-- faq question -->
+            <h1 class="faq-page">What is the largest and the smallest planet in the solar system?</h1>
+                <!-- faq answer -->
+                <div class="faq-body">
+                    <p style="background-color: rgb(139, 138, 138);">
+                        Of the eight planets in our solar system, the largest is Jupiter.This gaint planet is over 
+                        a thousand times larger than the Earth.
+                        Whereas the smallest planet in our solar system is mercury(As pluto is demoted and reclassified 
+                        as a dwarf planet in the year 2006). </p>
+                </div>
+            </div>
+            <hr class="hr-line">
+            <div class="faq-five">
+                <!-- faq question -->
+            <h1 class="faq-page">How old is the Solar System?</h1>
+                <!-- faq answer -->
+                <div class="faq-body">
+                    <p style="background-color: rgb(139, 138, 138);">	
+                        Astronomers believe that the Solar System is about 4.6 billion years old.  </p>
+                </div>
+            </div>
+            <hr class="hr-line">
+            <div class="faq-six">
+                <!-- faq question -->
+            <h1 class="faq-page">What are comets and where do they come from?</h1>
+                <!-- faq answer -->
+                <div class="faq-body">
+                    <p style="background-color: rgb(139, 138, 138);">	
+                        Comets are relatively small Solar System bodies composed of ice and dust. 
+                        Due to this unusual composition, many astronomers refer to them as “dirty snowballs”. 
+                        It is believed that most comets originate in an area at the outer edge of the Solar System 
+                        known as the Oort cloud </p>
+                </div>
+            </div>
+            <hr class="hr-line">
+            <div class="faq-seven">
+                <!-- faq question -->
+            <h1 class="faq-page">What is a star?</h1>
+                <!-- faq answer -->
+                <div class="faq-body">
+                    <p style="background-color: rgb(139, 138, 138);">
+                        A star is a gigantic, luminous ball of heated gas, or plasma, held together by gravity. 
+                        They are formed mainly of hydrogen and helium </p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script>
+        var faq = document.getElementsByClassName("faq-page");
+var i;
+
+for (i = 0; i < faq.length; i++) {
+    faq[i].addEventListener("click", function () {
+        /* Toggle between adding and removing the "active" class,
+        to highlight the button that controls the panel */
+        this.classList.toggle("active");
+
+        /* Toggle between hiding and showing the active panel */
+        var body = this.nextElementSibling;
+        if (body.style.display === "block") {
+            body.style.display = "none";
+        } else {
+            body.style.display = "block";
+        }
+    });
+}
+    </script>
+</body>
+</html>

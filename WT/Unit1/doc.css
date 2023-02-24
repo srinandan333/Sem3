@@ -1,0 +1,41 @@
+body
+{
+    text-align: center;
+    color: black;
+    background-image: url("https://cache.careers360.mobi/media/presets/720X480/colleges/social-media/media-gallery/37/2018/10/6/Campus%20View%20of%20PES%20University%20Bangalore_Campus-View.jpg"),url("https://pes.edu/wp-content/uploads/2019/09/ec400x265-1.jpg");
+    background-repeat: no-repeat;
+    background-position-x: 5%,95%;
+    background-position-y: 23%,23%;
+    background-size: 30%,30%;
+    background-color: rgb(87, 167, 241);
+    color: black;
+    font-size: 20px;
+}
+title
+{
+    align-items: center;
+    font-size: 150%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 10%;
+    font-style: italic;
+}
+h1
+{
+    color: rgb(211, 24, 24);
+    align-items: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 10%;
+    font-style: italic;
+}
+h4 
+{
+    color: rgb(13, 99, 13);
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    font-weight: 10%;
+    font-style: normal;
+}
+
+
+

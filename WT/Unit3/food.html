@@ -1,0 +1,148 @@
+<html>
+  <head>
+    <title></title>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@16/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+  </head>
+  <body>
+    <style>
+      .d1 {
+        background-color: rgb(38, 197, 59);
+        padding: 10px;
+        float: left;
+        display: grid;
+      }
+      .d2 {
+        background-color: rgb(240, 94, 50);
+        padding: 10px;
+        float: right;
+        display: grid;
+      }
+      .d3 {
+        background-color: goldenrod;
+        padding: 10px;
+        display: grid;
+      }
+      .i1{
+        width : 400px;
+        height: 400px;
+      } 
+      .i2{
+        width : 400px;
+        height: 400px;
+      }
+      .i3{
+        width : 400px;
+        height: 400px;
+      }
+      #root{
+          position: absolute;
+          display: flex;
+      }
+    </style>
+    <div id="root"></div>
+    <script type="text/babel">
+        class Pizza extends React.Component
+        {
+          render()
+          {
+            return (
+              <div className = "d1">
+                  <img src = "https://img.onmanorama.com/content/dam/mm/en/food/features/images/2021/10/17/pizza.jpg" className = "i1"></img>
+                <h1>{this.props.value[0]}</h1>
+                <h2>Price : {this.props.value[1]} </h2>
+                <h2 onChange = {this.props.onBill}> Quantity : {this.props.value[2]} </h2>
+                <button type="button" onClick = {()=> {this.props.onQuantity(this.props)}}> + </button>
+              </div>
+            );
+          }
+        }
+
+        class Ice extends React.Component
+        {
+          render()
+          {
+            return (
+              <div className = "d2">
+                <img src = "https://imagesvc.meredithcorp.io/v3/mm/image?q=85&c=sc&poi=face&w=4288&h=2144&url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F453291.jpg" className = "i2"></img>
+                <h1>{this.props.value[0]} </h1>
+                <h2> Price : {this.props.value[1]} </h2>
+                <h2 onChange = {this.props.onBill}> Quantity : {this.props.value[2]} </h2>
+                <button type="button" onClick = {()=> {this.props.onQuantity(this.props)}}> + </button>
+              </div>
+            );
+          }
+        }
+        class Cake extends React.Component {
+          render() {
+            return (
+              <div className = "d3">
+                <img src = "https://www.bloomsonly.com/media/catalog/product/cache/2/image/9df78eab33525d08d6e5fb8d27136e95/1/5/1512818056-chocolate-truffle-cream-cake-half-kg_1.jpg" className = "i3"></img>
+                <h1>{this.props.value[0]} </h1>
+                <h2> Price : {this.props.value[1]} </h2>
+                <h2 onChange = {this.props.onBill}> Quantity : {this.props.value[2]} </h2>
+                <button type="button" onClick = {()=> {this.props.onQuantity(this.props)}}> + </button>
+              </div>
+            );
+          }
+        }
+
+        class Main extends React.Component {
+          state = {
+            pizza : ["Pizza", 150, 0],
+            ice : ["Ice-cream", 100, 0],
+            cake : ["Dark-chocolate",200, 0],
+            total : 0
+          };
+
+          handleQuantity = (p)=>{
+              let a = p.value;
+              a[2] = a[2] + 1;
+              this.setState({a : [a[0],a[1],a[2]]})
+        }
+        handleBill = ()=>{
+            var sum = 0;
+            for (let i in this.state)
+            {
+                let a = this.state[i];
+                if (a[2] != 0)
+                {
+
+                    sum = sum + a[1]*a[2];
+                    return sum;
+                }
+            }
+            
+            
+        }
+          render() {
+
+            return (
+              <div>
+                  <div>
+                      <Pizza  value={this.state.pizza} onQuantity = {this.handleQuantity} onBill = {this.handleBill}/>
+                      <Ice value={this.state.ice} onQuantity = {this.handleQuantity} onBill = {this.handleBill}/>
+                      <Cake value={this.state.cake} onQuantity = {this.handleQuantity} onBill = {this.handleBill} />
+                  </div>
+                  <div>
+                      <h2>The Total bill price is : &#8377; {this.handleBill()}</h2>;
+                  </div>
+              </div>
+            );
+          }
+        }
+        ReactDOM.render(<Main
+          />, document.getElementById("root"));
+    </script>
+  </body>
+</html>
+
+
+

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="doc.css">
+</head>
+<title>
+    Survey/Feedback Form
+</title>
+
+<body>
+    <form>
+        <img src="https://www.collegebatch.com/info/wp-content/uploads/2018/06/PESU.jpg" width="500" height="100">
+        <h1>
+            Survey/Feedback Form
+        </h1>
+        <h4>
+            Student Details
+        </h4>
+        <label>
+            Name: <input type="text">
+        </label>
+        <br><br>
+        <label>
+            SRN: <input type="text">
+        </label>
+        <br><br>
+        <label>
+            Email id: <input type="text">
+        </label>
+        <br><br>
+        <label>
+            Class: <input type="text">
+        </label>
+        <br><br>
+        <label>
+            Section: <input type="text">
+        </label>
+        <br><br>
+        <label>
+            Roll no: <input type="text">
+        </label>
+        <br><br>
+        <h4>
+            Are you a robot?
+        </h4>
+        <label>
+            <input type="checkbox"> Yes
+        </label>
+        <label>
+            <input type="checkbox"> No
+        </label>
+        <label>
+            <input type="checkbox"> Sometimes
+        </label>
+        <br><br>
+        <h4>
+            Choose the Campus and branch you belong to:
+        </h4>
+        <select>
+            <option selected disabled>
+                Select Campus:
+            </option>
+            <option>
+                Ring Road Campus
+            </option>
+            <option>
+                Electronic City
+            </option>
+            <option>
+                Hanumanthnagara
+            </option>
+        </select>
+        <br><br>
+        <h4> Select Branch:</h4>
+        <input type="radio" name="branch" id="Computer Science">
+        <label for="cs">
+            CS
+        </label>
+        <input type="radio" name="branch" id="Mechanical Engineering">
+        <label for="me">
+            ME
+        </label>
+        <input type="radio" name="branch" id="Civil Engineering">
+        <label for="ce">
+            CE
+        </label>
+        <input type="radio" name="branch" id="Bio Technology">
+        <label for="bt">
+            BT
+        </label>
+        <input type="radio" name="branch" id="Electronics and Communication">
+        <label for="ece">
+            ECE
+        </label>
+        <input type="radio" name="branch" id="Electrical and Electronics">
+        <label for="eee">
+            EEE
+        </label>
+        <br><br>
+        <h4>
+            Student Feedback
+        </h4>
+        <p>
+            We would like to know how the students feel about PES University.
+            Be free to comment on anything like the food, the campus,
+            the sports facilities, the teachers and the classes.
+        </p>
+        <br>
+        <textarea rows="10" cols="100" placeholder="Enter Feedback here"></textarea>
+        <br><br>
+        <button type="submit" onclick="///C:/HTML/sucess.html">
+            Submit
+        </button>
+        <button type="reset" onclick="///C:/HTML/prog.html">
+            Reset
+        </button>
+        <br><br><br>
+        For more information about us, you can visit
+        <a href="https://pes.edu/" target="_blank">
+            PES University
+        </a>
+        <br><br>
+        <script src="datetime.js"></script>
+    </form>
+    <footer>
+        <p align="center">
+            Current Date and Time is:
+        </p>
+        <input class="btn" style="float: center;" type="button" value="click" onclick="msg()" />
+        <span text-align="center" id="date-time"></span>
+        <br>
+    </footer>
+</body>
+
+</html>
